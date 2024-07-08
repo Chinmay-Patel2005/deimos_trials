@@ -9,20 +9,35 @@ For mapping
 
 First run the launch file for hospital.world
 Run:
+
 export TURTLEBOT3_MODEL=burger(or any other bot)
+
 roslaunch turtlebot3_gazebo hospital.launch
+
 #This launches the world in gazebo with the turtlebot.
+
 #Open a new terminal
+
 export TURTLEBOT3_MODEL=burger(keep the same model)
+
 roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping(runs the slam node)
+
 #This opens rviz for us to do the mapping
+
 #Open a new terminal
+
 export TURTLEBOT3_MODEL=burger(same as above)
+
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch(runs teleop node)
+
 #Now you can use teleop to make the map in rviz
+
 #When you are done
+
 rosrun map_server map_saver -f ~/map_name(uses map server to save in home directory)
+
 #Replace map name with any name you want. You can also save it in a different directory by including the path you want to save it at.
+
 #My partial map is named map4
 
 
